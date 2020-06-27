@@ -10,6 +10,7 @@
 #include "dijsubw.h"
 #include "floydsubw.h"
 #include "modifysubw.h"
+#include "allpathsubw.h"
 
 namespace Ui {
 class MainWindow;
@@ -43,6 +44,9 @@ public:
     void showModifySubw();
     void showMain5();
 
+    //所有可行路径
+    void showAllPathSubw();
+    void showMain6();
 
     //输出矩阵
     void showMatrixSubw();
@@ -69,9 +73,7 @@ private:
     DijSubw dijSubw;
     FloydSubw floydSubw;
     ModifySubw modifySubw;
-
-
-
+    AllPathSubw allPathSubw;
     MatrixSubw matrixSubw;
 
 

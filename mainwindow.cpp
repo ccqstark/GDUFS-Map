@@ -99,6 +99,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(&modifySubw,&ModifySubw::returnSig5,this,&MainWindow::showMain5);
 
 
+    //所有可行路径
+    connect(&pathCanGo,&QPushButton::clicked,this,&MainWindow::showAllPathSubw);
+    connect(&allPathSubw,&AllPathSubw::returnSig6,this,&MainWindow::showMain6);
 
 
     //邻接矩阵
@@ -166,8 +169,17 @@ void MainWindow::showMain5()
     modifySubw.close();
     this->show();
 }
-
-
+//所有可行路径
+void MainWindow::showAllPathSubw()
+{
+    this->hide();
+    allPathSubw.show();
+}
+void MainWindow::showMain6()
+{
+    allPathSubw.close();
+    this->show();
+}
 
 
 //矩阵

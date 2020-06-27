@@ -37,7 +37,9 @@ SOURCES += \
     map.cpp \
     floydsubw.cpp \
     checkpathsubw.cpp \
-    modifysubw.cpp
+    modifysubw.cpp \
+    allpathsubw.cpp \
+    cangosubw.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -50,7 +52,9 @@ HEADERS += \
     map.h \
     floydsubw.h \
     checkpathsubw.h \
-    modifysubw.h
+    modifysubw.h \
+    allpathsubw.h \
+    cangosubw.h
 
 FORMS += \
         mainwindow.ui
