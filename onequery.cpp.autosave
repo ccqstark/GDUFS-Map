@@ -1,0 +1,10 @@
+#include "onequerysubw.h"
+
+OneQuery::OneQuery(QWidget *parent) : QMainWindow(parent)
+{
+    this->resize(400,300);
+    this->setWindowTitle("单景点查询");
+    QIcon windowIcon(":/new/images/icon.png");
+    this->setWindowIcon(windowIcon);
+    
+}

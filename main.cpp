@@ -1,3 +1,8 @@
+/*
+ * func: main loop
+ * author: ccq
+ * date:2020.6.25
+*/
 #include "mainwindow.h"
 #include <QApplication>
 

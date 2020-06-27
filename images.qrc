@@ -1,1 +1,23 @@
-<RCC/>
+<RCC>
+    <qresource prefix="/new">
+        <file>images/icon.png</file>
+        <file>images/gate.png</file>
+        <file>images/canteen1.png</file>
+        <file>images/canteen2.png</file>
+        <file>images/dorm.png</file>
+        <file>images/eight.png</file>
+        <file>images/gogo.png</file>
+        <file>images/hospital.png</file>
+        <file>images/lab.png</file>
+        <file>images/lecturehall.png</file>
+        <file>images/library.png</file>
+        <file>images/meetinghall.png</file>
+        <file>images/office.png</file>
+        <file>images/playground.png</file>
+        <file>images/supermarket.png</file>
+        <file>images/teach.png</file>
+        <file>images/tunnel.png</file>
+        <file>images/bigmap.png</file>
+        <file>images/pointcode.png</file>
+    </qresource>
+</RCC>
