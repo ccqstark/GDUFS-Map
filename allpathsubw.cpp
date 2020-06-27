@@ -1,3 +1,8 @@
+/*
+ * func: all path can go
+ * author: ccq
+ * date:2020.6.27
+*/
 #include "allpathsubw.h"
 
 AllPathSubw::AllPathSubw(QWidget *parent) : QMainWindow(parent)

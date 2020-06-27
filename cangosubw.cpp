@@ -1,3 +1,8 @@
+/*
+ * func: all path can go (result)
+ * author: ccq,hcx
+ * date:2020.6.27
+*/
 #include "cangosubw.h"
 #include <QDebug>
 int d[16];
