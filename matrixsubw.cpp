@@ -8,6 +8,18 @@
 
 MatrixSubw::MatrixSubw(QWidget *parent) : QMainWindow(parent)
 {
+
+}
+
+void MatrixSubw::show_it()
+{
+
+    this->resize(600,400);
+    this->setWindowTitle("邻接矩阵");
+    QIcon windowIcon(":/new/images/icon.png");
+    this->setWindowIcon(windowIcon);
+
+
     extern int mapp[16][16];
     QString matrix;
 
@@ -23,13 +35,46 @@ MatrixSubw::MatrixSubw(QWidget *parent) : QMainWindow(parent)
           matrix.append('\n');
       }
 
+    textlabel->setText(matrix);
+    textlabel->setGeometry(rect().x(),rect().y(),600,400);
+    textlabel->setParent(this);
+    textlabel->show();
+
+
+    sure.setParent(this);
+    sure.resize(70,40);
+    sure.move(260,340);
+    sure.setText("确定");
+
+    connect(&sure,&QPushButton::clicked,this,&MatrixSubw::close);
+}
+
+
+
+void MatrixSubw::forModifyShow()
+{
 
     this->resize(600,400);
     this->setWindowTitle("邻接矩阵");
     QIcon windowIcon(":/new/images/icon.png");
     this->setWindowIcon(windowIcon);
 
-    QLabel *textlabel = new QLabel();
+
+    QString matrix;
+    extern int mapp[16][16];
+    for (int i = 1; i <= 15; ++i) {
+          for (int j = 1; j <= 15; ++j) {
+              if (mapp[i][j]==INF) matrix.append("INF  ");
+              else {
+                  QString num = QString::number(mapp[i][j]);
+                  matrix.append(num);
+                  matrix.append("  ");
+              }
+          }
+          matrix.append('\n');
+      }
+
+
     textlabel->setText(matrix);
     textlabel->setGeometry(rect().x(),rect().y(),600,400);
     textlabel->setParent(this);
@@ -41,6 +86,5 @@ MatrixSubw::MatrixSubw(QWidget *parent) : QMainWindow(parent)
     sure.setText("确定");
 
     connect(&sure,&QPushButton::clicked,this,&MatrixSubw::close);
-
 
 }

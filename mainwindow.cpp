@@ -94,6 +94,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     //接收subWindow发来的信号，执行返回主窗口
     connect(&floydSubw,&FloydSubw::returnSig4,this,&MainWindow::showMain4);
 
+    //修改矩阵
+    connect(&changGraphInfo,&QPushButton::clicked,this,&MainWindow::showModifySubw);
+    connect(&modifySubw,&ModifySubw::returnSig5,this,&MainWindow::showMain5);
+
 
 
 
@@ -151,7 +155,17 @@ void MainWindow::showMain4()
     floydSubw.close();
     this->show();
 }
-
+//修改图的信息
+void MainWindow::showModifySubw()
+{
+    this->hide();
+    modifySubw.show();
+}
+void MainWindow::showMain5()
+{
+    modifySubw.close();
+    this->show();
+}
 
 
 
@@ -159,6 +173,7 @@ void MainWindow::showMain4()
 //矩阵
 void MainWindow::showMatrixSubw()
 {
+   matrixSubw.show_it();
    matrixSubw.show();
 }
 

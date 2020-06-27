@@ -12,8 +12,12 @@ class MatrixSubw : public QMainWindow
 public:
     explicit MatrixSubw(QWidget *parent = nullptr);
 
+    void show_it();
+    void forModifyShow();
+
 private:
     QPushButton sure;
+    QLabel *textlabel = new QLabel();
 
 
 signals:

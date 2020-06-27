@@ -9,7 +9,7 @@
 #include "matrixsubw.h"
 #include "dijsubw.h"
 #include "floydsubw.h"
-
+#include "modifysubw.h"
 
 namespace Ui {
 class MainWindow;
@@ -39,6 +39,9 @@ public:
     void showFloydSubw();
     void showMain4();
 
+    //修改矩阵
+    void showModifySubw();
+    void showMain5();
 
 
     //输出矩阵
@@ -65,6 +68,7 @@ private:
     OneQuerySubw oneQuerySubw;
     DijSubw dijSubw;
     FloydSubw floydSubw;
+    ModifySubw modifySubw;
 
 
 
